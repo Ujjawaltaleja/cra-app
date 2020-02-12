@@ -11,11 +11,11 @@ class  App extends Component {
   }
   render(){
     return (
-      <div className="App">
+      <div>
         <button>{this.state.data}</button>
         <header className="App-header">
           <FirstChild clickFirst={this.clickParent} />
-          <BrotherOfFirst clickBrotherOfFirst={this.clickParent} />
+          <BrotherOfFirst clickBrotherOfFirst={this.clickParent}  data={this.state.data} />
         </header>
       </div>
     );

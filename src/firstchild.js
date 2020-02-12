@@ -6,10 +6,8 @@ class FirstChild extends Component {
     data: "FirstChild"
   };
   clickFirst = newState => {
-    // this.setState({
-    //   data: newState
-    // });
-    alert(3);
+      this.props.clickFirst(newState);
+    
   };
   render() {
     return (
