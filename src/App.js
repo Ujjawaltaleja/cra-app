@@ -22,7 +22,7 @@ class  App extends Component {
         <button>{this.state.data}</button>
         <header className="App-header">
           <FirstChild clickFirst={this.clickParent} />
-          <BrotherOfFirst clickBrotherOfFirst={this.clickParent} ref={this.child} data={this.fakestate.data} />
+          <BrotherOfFirst clickBrotherOfFirst={this.clickParent} ref={this.child} data={this.state.data} />
         </header>
       </div>
     );

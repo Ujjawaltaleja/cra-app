@@ -8,19 +8,26 @@ class  BrotherOfFirst extends Component {
   constructor(props) {
     super(props);
     console.log("constructor");
-    this.child = React.createRef();
+    this.child = React.createRef(); 
   }
   componentWillMount(){
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => this.setState({data:json.userId}))
+  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  // .then(response => response.json())
+  // .then(json => this.setState({data:json.userId}))
     console.log("componentWillMount "+this.state.data);
   }
   componentDidMount(){
+  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  // .then(response => response.json())
+  // .then(json => this.setState({data:json.userId}))
     console.log("componentDidMount");
   }
-  componentWillReceiveProps(){
+  componentWillReceiveProps(next,state){
+    if(this.props.data!==next.data)
     console.log("componentWillReceiveProps");
+    console.log(next);
+    console.log(this.props);
+    console.log("componentWillReceiveProps "+next+" propsnow "+this.props);
   }
   shouldComponentUpdate(){
     console.log("shouldComponentUpdate");
