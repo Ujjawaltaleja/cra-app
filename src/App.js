@@ -6,8 +6,14 @@ class  App extends Component {
   state={
     data:'parent'
   } 
+  constructor(props) {
+    super(props);
+    this.child = React.createRef();
+  }
+
+  fakestate={data:"fakedata App"};
   clickParent=(newState)=>{
-    this.setState({data:newState});
+    this.child.current.passchildfuntoparent(newState);
   }
   render(){
     return (
@@ -15,7 +21,7 @@ class  App extends Component {
         <button>{this.state.data}</button>
         <header className="App-header">
           <FirstChild clickFirst={this.clickParent} />
-          <BrotherOfFirst clickBrotherOfFirst={this.clickParent}  data={this.state.data} />
+          <BrotherOfFirst clickBrotherOfFirst={this.clickParent} ref={this.child} data={this.fakestate.data} />
         </header>
       </div>
     );
