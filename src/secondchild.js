@@ -8,10 +8,21 @@ class  SecondChild extends Component {
     this.props.clickSecond(newState);
   
 };
+constructor(props){
+  
+super(props);
+};
+ classfunctionis= function classfunction(){
+   debugger;
+  this.setState({data:26});
+  
+}
     render(){
+      console.log("ujjawa");
       return (
-        <div className="App" >
-        <button onClick= {() => {this.props.clickSecond(this.state.data);this.clickSecondChild()}}>{this.state.data}</button>
+        <div className="App" > SecondChild
+        <button onClick= {() => {this.props.clickSecond(this.state.data); }}>{this.state.data}</button>
+        <button onClick= {() => {this.classfunctionis(); }}>Component button</button>
         </div>
       );
     }

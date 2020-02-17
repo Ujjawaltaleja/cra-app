@@ -7,7 +7,7 @@ class  BrotherOfFirst extends Component {
     render(){
       
       return (
-        <div className="App" >
+        <div className="App" > BrotherOfFirst
         <button onClick= {() => {this.props.clickBrotherOfFirst(this.state.data)}}>{this.props.data}</button>
         </div>
       );

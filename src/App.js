@@ -5,13 +5,13 @@ import BrotherOfFirst from './brotheroffirst';
 class  App extends Component {
   state={
     data:'parent'
-  }
+  } 
   clickParent=(newState)=>{
     this.setState({data:newState});
   }
   render(){
     return (
-      <div>
+      <div> App
         <button>{this.state.data}</button>
         <header className="App-header">
           <FirstChild clickFirst={this.clickParent} />

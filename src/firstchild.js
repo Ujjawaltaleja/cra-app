@@ -11,7 +11,7 @@ class FirstChild extends Component {
   };
   render() {
     return (
-      <div className="App">
+      <div className="App"> FirstChild
         <button>{this.state.data}</button>
          <SecondChild clickSecond={this.clickFirst} />
       </div>
