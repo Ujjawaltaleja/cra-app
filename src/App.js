@@ -10,10 +10,11 @@ class  App extends Component {
     super(props);
     this.child = React.createRef();
   }
-
+  
   fakestate={data:"fakedata App"};
   clickParent=(newState)=>{
     this.child.current.passchildfuntoparent(newState);
+    this.setState({data:newState});
   }
   render(){
     return (
