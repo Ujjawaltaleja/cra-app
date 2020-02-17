@@ -11,7 +11,10 @@ class  BrotherOfFirst extends Component {
     this.child = React.createRef();
   }
   componentWillMount(){
-    console.log("componentWillMount");
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => this.setState({data:json.userId}))
+    console.log("componentWillMount "+this.state.data);
   }
   componentDidMount(){
     console.log("componentDidMount");
